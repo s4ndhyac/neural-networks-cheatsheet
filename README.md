@@ -70,6 +70,18 @@ y\` = 1 when x > x\`  because P(y=1|x) > P(y=0|x)  and 0 when x < x\` because P(
 - For a gaussian distribution use logs
 
 
+### SVMS
+- Model = f(x) = w.x + b
+- decision boundary - +1 if f(x) > 0 && -1 if f(x) < 0
+- move boundary to either side: f(x) = +1 and f(x) = -1
+- Margin: Choose x on f(x)=-1 and find x` on f(x)=1 closest to it. xx' must be orthogonal to f(x)=0. margin |x-x'| = d = rW for some scalar r.
+- => d = |rW| = |r|.|W| = r. |W|/|W|^2 = 2/|W|
+- Goal: Find W and b s.t. maximize the margin (Constraint Optimization)
+- maximize margin ~ minimize norm of  W
+- solve using lagrangian multiplier
+- min-max primal to dual problem - https://www.math.kth.se/optsyst/grundutbildning/kurser/SF1841/minmaxdualeng.pdf
+
+
 
 
 
